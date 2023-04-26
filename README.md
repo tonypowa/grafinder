@@ -3,7 +3,7 @@
 
 ### To-do list:
 
-1. take input from user and store in a variable
+1. when executing the script, pass a link as a arg. Take this input and store it in a variable
 - create a function to:
   - validate length of input.  
   - format user input variable: convert string to lowercase
