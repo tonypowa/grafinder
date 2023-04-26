@@ -8,18 +8,17 @@
   - validate length of input.  
   - format user input variable: convert string to lowercase
   - remove blank space from beginning and end of string
-  - perhaps also clean characters like apostrophes and things like that
-- be able to escape the app entering a keyword ('q')
-- be able to search issues in github (grafana/grafana) and forum posts in community.grafana.com via HTTP request
+- be able to search issues in github, and forum posts in community.grafana.com by either giving a link, or a number of keywords (i.e. issue / topic description)
   - import requests pygithub pydiscourse libraries
   - manually obtain API keys from GH and Discourse
-  - store the API keys in variables as a start and later store in env variables for better security
+  - store the API keys in variables for better security
   - create a funtion to:
-    - pass the value of user input into the pygithub and pydiscourse search functions (decide which search params we need)
-    - iterate (create a for loop in python) through the response
-    - return the items from the response
+    - IF URL: GET the issue/topic keywords and pass it into the pygithub and pydiscourse search functions (decide which search params we need)
+    - IF keywords, pass it into the pygithub and pydiscourse search functions (decide which search params we need)
+    - return a number of issues/topics that hopefully are relevant to what was searched.
+ 
 
 
 ### Nice-to-have:
 
-- have functions for different types of search (search titles, search comments, etc) or make functions more powerful by adding function args, so the user can pass arguments to refine their search
+- enable using args when executing the script to perform different types of search (search titles, search comments, etc) 
