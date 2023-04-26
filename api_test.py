@@ -44,7 +44,7 @@ print(issue)
 # payload = {}
 # headers = {
 #   'Accept': 'application/vnd.github+json',
-#   'Authorization': 'Bearer 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',
+#   'Authorization': 'Bearer xxx',
 #   'X-GitHub-Api-Version': '2022-11-28'
 # }
 
