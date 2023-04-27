@@ -27,17 +27,21 @@ user_input = user_arg.text # take arg passed from the user and store its value i
 if len(user_input) > 100: # validate length of input.
     print("isn't this link too long?")
 else:
-    user_input = user_input.lower().strip() # convert to lowercase, and remove any whitespace
+    try:
+        user_input = user_input.lower().strip() # convert to lowercase, and remove any whitespace
 
-    # IF GitHub link (future to-do):
-    # extract issue number 
-    # and pass it to the get_issue method
+        # IF GitHub link (future to-do):
+        # extract issue number 
+        # and pass it to the get_issue method
 
-    issue_number = re.match(".*?([0-9]+)$",user_input).group(1)
-    print(f" detected issue number: {issue_number}")
-    repo = g.get_repo("grafana/grafana") # temporarily hardcoded owner/repo
-    issue = repo.get_issue(int(issue_number)).title
-    print(f" title: {issue}")
+        issue_number = re.match(".*?([0-9]+)$",user_input).group(1)
+        print(f" detected issue number: {issue_number}")
+        repo = g.get_repo("grafana/grafana") # temporarily hardcoded owner/repo
+        issue = repo.get_issue(int(issue_number)).title
+        print(f" title: {issue}")
+    
+    except AttributeError:
+        print("this does not look like a valid GitHub issue link")
 
 
 
