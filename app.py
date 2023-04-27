@@ -1,6 +1,8 @@
 import argparse
 from key_git import token
 import re
+import traceback
+
 
 # add the path to the root of the project to sys.path 
 # (this was needed to be able to import PyGithub lib. Normal import didn't work). 
@@ -42,6 +44,10 @@ else:
     
     except AttributeError:
         print("this does not look like a valid GitHub issue link")
+    except Exception as e:
+        tb = traceback.format_exc()
+        if "Not Found" in tb:
+            print("issue not found!")
 
 
 
