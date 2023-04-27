@@ -6,6 +6,8 @@ import traceback
 
 # add the path to the root of the project to sys.path 
 # (this was needed to be able to import PyGithub lib. Normal import didn't work). 
+# so, instead i cloned the repo and added its location to the path
+# https://github.com/PyGithub/PyGithub
 # uncomment following code block if needed
 
 # from pathlib import Path
