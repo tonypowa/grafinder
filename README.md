@@ -5,19 +5,29 @@
 
 1. when executing the script, pass a link as a arg. Take this input and store it in a variable
 - create a function to:
-  - validate length of input.  
-  - format user input variable: convert string to lowercase
-  - remove blank space from beginning and end of string
-- be able to search issues in github, and forum posts in community.grafana.com by either giving a link, or a number of keywords (i.e. issue / topic description)
-  - import requests pygithub pydiscourse libraries
-  - manually obtain API keys from GH and Discourse
-  - store the API keys in variables for better security
+  - validate length of input.  :heavy_check_mark:
+  - format user input variable: convert string to lowercase :heavy_check_mark:
+  - remove blank space from beginning and end of string :heavy_check_mark:
+- be able to search for issues in github by either giving a link, :heavy_check_mark:,  or a number of keywords 
+- be able to search for forum posts in community.grafana.com by either giving a link, or a number of keywords 
+  - import and implement pygithub lib :heavy_check_mark: 
+  - import and implement pydiscourse lib
+  - manually obtain API keys: 
+    - GitHub :heavy_check_mark:
+    - Discourse
+  - store the API keys in separate untracked files for better security :heavy_check_mark:
   - create a funtion to:
-    - IF URL: GET the issue/topic keywords and pass it into the pygithub and pydiscourse search functions (decide which search params we need)
-    - IF keywords, pass it into the pygithub and pydiscourse search functions (decide which search params we need)
-    - return a number of issues/topics that hopefully are relevant to what was searched.
+  
+    - IF URL: 
+      - detect whether the link belongs to GitHub / Discourse,  
+      - then , call the respective API to GET the issue/topic keywords
+      - finally, pass them into the pygithub and pydiscourse search functions (decide which search params we need)
+      
+    - IF keywords, 
+      - pass it into the pygithub and pydiscourse search functions (decide which search params we need)
+      - return a number of issues/topics that hopefully are relevant to what was searched.
  
-
+- add error handling :hammer:
 
 ### Nice-to-have:
 
