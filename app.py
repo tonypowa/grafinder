@@ -1,23 +1,27 @@
 import argparse
-from key_git import token
 import re
 import traceback
+from github import Github
+# ignore me: 
+# from key_git import token
 
-
-# add the path to the root of the project to sys.path 
-# (this was needed to be able to import PyGithub lib. Normal import didn't work). 
-# so, instead i cloned the repo and added its location to the path
+# in case you get errors when importing PyGithub lib:
+# comment line 4 from github import Github
+# clone the library repo into your project folder
 # https://github.com/PyGithub/PyGithub
-# uncomment following code block if needed
+# uncomment bellow code block to add the path to the root of the project to sys.path 
 
 # from pathlib import Path
 # import sys
 # path_root = Path(__file__).parents[2]
 # sys.path.append(str(path_root))
 # print(sys.path)
+# from PyGithub.github import Github
 
-from PyGithub.github import Github
-g = Github(f"{token}")
+g = Github("token")
+
+# ignore me: 
+# g = Github(f"{token}") 
 
 
 # allows to pass arguments (e.g. -h, --help)
