@@ -1,5 +1,36 @@
 # GRAFINDER
-## a python app to find Grafana issues and community posts from one place
+### A python app to find Grafana issues and community posts from one place
+
+
+## Setup
+
+```
+$ pip install PyGithub
+```
+
+In `app.py`:
+
+Replace `"token"` with your own GitHub API token
+
+```
+g = Github("token")
+```
+
+## Run
+
+`python app.py -h` for information
+
+
+## Get Github issue title
+
+```
+python app.py {your_URL}
+```
+
+That's it for now. The rest of the app is still being developed. 
+Thanks for reading!
+
+-----
 
 ### To-do list:
 
