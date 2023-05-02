@@ -8,11 +8,13 @@
 $ pip install PyGithub
 ```
 
-In `app.py`:
+## Auth.
 
-Replace `"token"` with your own GitHub API token
+Copy the template in env.template over to the .env file (`cp` will actually create the `.env file`). Write your credentials in the *.env file.*
 
-`g = Github("token")`
+```
+cp .env.template .env
+```
 
 ## Run
 
@@ -32,6 +34,15 @@ Thanks for reading!
 
 ### To-do list:
 
+0. Auth
+
+- create env.template file in the root directory of the project
+  - create a skeleton for the env creds (it will serve as template for the proper .env file the user will create)
+- add .env to .gitignore
+- `pip install python-dotenv`
+- import function in app.py: `from dotenv import load_dotenv`
+- add line `github.api_key = os.environ['GITHUB_API_KEY']` to `app.py`
+
 1. when executing the script, pass a link as a arg. Take this input and store it in a variable
 - create a function to:
   - validate length of input.  :heavy_check_mark:
@@ -41,10 +52,6 @@ Thanks for reading!
 - be able to search for forum posts in community.grafana.com by either giving a link, or a number of keywords 
   - import and implement pygithub lib :heavy_check_mark: 
   - import and implement pydiscourse lib
-  - manually obtain API keys: 
-    - GitHub :heavy_check_mark:
-    - Discourse
-  - store the API keys in separate untracked files for better security :heavy_check_mark:
   - create a funtion to:
   
     - IF URL: 
