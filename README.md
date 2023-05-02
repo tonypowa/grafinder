@@ -2,18 +2,25 @@
 ### A python app to find Grafana issues and community posts from one place
 
 
-## Setup
+## Requirements
 
 ```
-$ pip install PyGithub
+$ pip install PyGithub python-dotenv
 ```
 
-## Auth.
+## GitHub API key import
 
 Copy the template in env.template over to the .env file (`cp` will actually create the `.env file`). Write your credentials in the *.env file.*
 
+Bash:
 ```
 cp .env.template .env
+```
+
+Windows's CMD
+
+```
+copy .env.template .env
 ```
 
 ## Run
@@ -36,12 +43,13 @@ Thanks for reading!
 
 0. Auth
 
-- create env.template file in the root directory of the project
-  - create a skeleton for the env creds (it will serve as template for the proper .env file the user will create)
-- add .env to .gitignore
-- `pip install python-dotenv`
-- import function in app.py: `from dotenv import load_dotenv`
-- add line `github.api_key = os.environ['GITHUB_API_KEY']` to `app.py`
+- create env.template file in the root directory of the project :heavy_check_mark:
+  - create a skeleton for the env creds (it will serve as template for the proper .env file the user will create) :heavy_check_mark:
+- add .env to .gitignore :heavy_check_mark:
+- `pip install python-dotenv`  :heavy_check_mark:
+- import function in app.py: `from dotenv import load_dotenv`  :heavy_check_mark:
+- add `load_dotenv()` to take what is in .env and pass it to os.environ  :heavy_check_mark:
+- add line `github.api_key = os.environ['GITHUB_API_KEY']` to `app.py` :heavy_check_mark:
 
 1. when executing the script, pass a link as a arg. Take this input and store it in a variable
 - create a function to:
