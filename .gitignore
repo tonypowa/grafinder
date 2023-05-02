@@ -1,3 +1,4 @@
+.env
 key_git.py
 PyGithub
 __pycache__/
