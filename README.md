@@ -4,8 +4,8 @@
 
 ## Requirements
 
-```
-$ pip install PyGithub python-dotenv
+``` sh
+pip install PyGithub python-dotenv
 ```
 
 ## GitHub API key import
@@ -14,13 +14,13 @@ Copy the template in env.template over to the .env file (`cp` will actually crea
 
 Bash:
 ```
-cp .env.template .env
+cp env.template .env
 ```
 
 Windows's CMD
 
 ```
-copy .env.template .env
+copy env.template .env
 ```
 
 ## Run
