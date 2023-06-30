@@ -29,9 +29,13 @@ else:
         user_input = user_input.lower().strip() # convert to lowercase, and remove any whitespace
         issue_number = re.match(".*?([0-9]+)$",user_input).group(1) # find issue number and pass it to get_issue
         print(f" detected issue number: {issue_number}")
-        repo = g.get_repo("grafana/grafana") # temporarily hardcoded owner/repo
-        issue = repo.get_issue(int(issue_number)).title
+        repo_ = g.get_repo("grafana/grafana") # temporarily hardcoded owner/repo
+        issue = repo_.get_issue(int(issue_number)).title
         print(f" title: {issue}")
+        result = g.search_issues(query=issue, repo="grafana/grafana")
+        count = 0
+        for index, issue in enumerate(result):
+            print(index,issue)
     
     except AttributeError:
         print("this does not look like a valid GitHub issue link")
