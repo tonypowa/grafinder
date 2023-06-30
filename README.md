@@ -1,6 +1,19 @@
 # GRAFINDER
 ### A python app to find Grafana issues and community posts from one place
 
+### Current status of the project:
+
+✔️ is able to accept a link of an issue from the grafana/grafana repo, find the issue, and make a query to github using the issue's title that returns the same search results as in the UI
+
+
+![image](https://github.com/tonypowa/grafinder/assets/45235678/35bbd670-24d7-4b31-b814-6de88c60c5cd)
+
+
+![image](https://github.com/tonypowa/grafinder/assets/45235678/ef1242cc-ab51-4733-a868-57c95f496cc8)
+
+
+
+
 
 ## Requirements
 
@@ -75,4 +88,4 @@ Thanks for reading!
 
 ### Nice-to-have:
 
-- enable using args when executing the script to perform different types of search (search titles, search comments, etc) 
+- enable using args when executing the script to perform different types of search (search titles, search comments, etc)
