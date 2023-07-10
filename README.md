@@ -3,7 +3,7 @@
 
 ### Current status of the project:
 
-✔️ is able to accept a link of an issue from the grafana/grafana repo, find the issue, and make a query to github using the issue's title that returns the same search results as in the UI
+✔️ is able to accept a link of an issue from the grafana/grafana repo, find the issue, and make a query to github using the issue's title, that returns the same search results as in the UI
 
 
 ![image](https://github.com/tonypowa/grafinder/assets/45235678/35bbd670-24d7-4b31-b814-6de88c60c5cd)
@@ -21,7 +21,18 @@
 pip install PyGithub python-dotenv
 ```
 
-## GitHub API key import
+## GitHub API token
+
+In order to search issues in GitHub, you will need to generate an [API token](https://github.com/settings/tokens). 
+
+> Note: Click Generate new token (classic).
+
+In addition, the token will require a number of permissions:
+
+![Pasted image 20230620152635](https://github.com/tonypowa/grafinder/assets/45235678/621d3cab-368c-4652-9f58-b90b5d69afba)
+
+
+### GitHub API token import
 
 Copy the template in env.template over to the .env file (`cp` will actually create the `.env file`). Write your credentials in the *.env file.*
 
